@@ -1,0 +1,74 @@
+....F....FF...FF.F
+======================================================================
+FAIL: test_eval_5 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 75, in test_eval_5
+    self.assertEqual(val, 153)
+AssertionError: 259 != 153
+
+======================================================================
+FAIL: test_print_3 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 102, in test_print_3
+    self.assertEqual(writer.getvalue(), "1 10 89\n")
+AssertionError: '201 210 89\n' != '1 10 89\n'
+- 201 210 89
+? --  -
++ 1 10 89
+
+
+======================================================================
+FAIL: test_print_4 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 107, in test_print_4
+    self.assertEqual(writer.getvalue(), "1 10 174\n")
+AssertionError: '900 1000 174\n' != '1 10 174\n'
+- 900 1000 174
++ 1 10 174
+
+
+======================================================================
+FAIL: test_read_4 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 50, in test_read_4
+    self.assertEqual(i, 900)
+AssertionError: 1 != 900
+
+======================================================================
+FAIL: test_solve (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 117, in test_solve
+    self.assertEqual(writer.getvalue(), "1 10 20\n100 200 25\n201 210 89\n900 1000 174\n")
+AssertionError: '1 10 20\n100 200 125\n201 210 89\n900 1000 174\n' != '1 10 20\n100 200 25\n201 210 89\n900 1000 174\n'
+  1 10 20
+- 100 200 125
+?         -
++ 100 200 25
+  201 210 89
+  900 1000 174
+
+
+======================================================================
+FAIL: test_solve_3 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 129, in test_solve_3
+    self.assertEqual(writer.getvalue(), "5 10 20\n83729 784000 331\n2016 1994 144\n2 1 2\n")
+AssertionError: '5 10 20\n783729 784000 331\n2016 1994 144\n2 1 2\n' != '5 10 20\n83729 784000 331\n2016 1994 144\n2 1 2\n'
+  5 10 20
+- 783729 784000 331
+? -
++ 83729 784000 331
+  2016 1994 144
+  2 1 2
+
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.807s
+
+FAILED (failures=6)
